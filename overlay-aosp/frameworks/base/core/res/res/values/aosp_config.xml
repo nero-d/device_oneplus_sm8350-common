@@ -41,4 +41,7 @@
 
     <!-- NightLight FOD -->
     <bool name="disable_fod_night_light">true</bool>
+
+    <!-- Defines custom Vendor sensor for pocket detection. -->
+    <string name="config_pocketJudgeVendorSensorName">oneplus.sensor.pocket</string>
 </resources>
