@@ -300,9 +300,9 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapper@3.0.vendor \
     vendor.qti.hardware.display.mapper@4.0.vendor
 
-# Doze
+# DeviceSettings
 PRODUCT_PACKAGES += \
-    OnePlusDoze
+    DeviceSettings
 
 # Dolby
 PRODUCT_PACKAGES += \
@@ -366,7 +366,6 @@ PRODUCT_COPY_FILES += \
 # Init
 PRODUCT_PACKAGES += \
     libinit_sm8350
-
 
 # IPACM
 PRODUCT_PACKAGES += \
@@ -523,7 +522,6 @@ PRODUCT_PACKAGES += \
 
 # tri-state-key
 PRODUCT_PACKAGES += \
-    KeyHandler \
     tri-state-key_daemon
 
 # Update engine
