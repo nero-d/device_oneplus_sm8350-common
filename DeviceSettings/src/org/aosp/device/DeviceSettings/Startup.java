@@ -54,7 +54,7 @@ public class Startup extends BroadcastReceiver {
         if (enabled) {
             restore(GameModeSwitch.getFile(), enabled);
         }
-        enabled = sharedPrefs.getBoolean(DeviceSettings.KEY_EDGE_TOUCH, true);
+        enabled = sharedPrefs.getBoolean(DeviceSettings.KEY_EDGE_TOUCH, false);
         if (enabled) {
             restore(EdgeTouchSwitch.getFile(), enabled);
         }

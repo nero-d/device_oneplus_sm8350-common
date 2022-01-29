@@ -53,4 +53,10 @@
 
     <!-- Exempt cne from privacy (location) indicators -->
     <string name="config_systemAudioIntelligence" translatable="false">com.qualcomm.qti.cne</string>
+
+    <!-- Device force gaming mode node -->
+    <string name="config_high_touch_sample_node">/proc/touchpanel/game_switch_enable</string>
+
+    <!-- Device unlimit edge touch node -->
+    <string name="config_unlimit_edge_touch_node">/proc/touchpanel/tpedge_limit_enable</string>
 </resources>

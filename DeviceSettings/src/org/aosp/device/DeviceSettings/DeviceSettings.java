@@ -165,7 +165,7 @@ public class DeviceSettings extends PreferenceFragment
             mGameModeSwitch.setSummary(getString(R.string.unsupported_feature));
         }
         mGameModeSwitch.setChecked(GameModeSwitch.isCurrentlyEnabled(this.getContext()));
-        mGameModeSwitch.setOnPreferenceChangeListener(new GameModeSwitch());
+        mGameModeSwitch.setOnPreferenceChangeListener(new GameModeSwitch(getContext()));
 
         mEdgeTouchSwitch = (TwoStatePreference) findPreference(KEY_EDGE_TOUCH);
         if (EdgeTouchSwitch.isSupported()) {
@@ -175,7 +175,7 @@ public class DeviceSettings extends PreferenceFragment
             mEdgeTouchSwitch.setSummary(getString(R.string.unsupported_feature));
         }
         mEdgeTouchSwitch.setChecked(EdgeTouchSwitch.isCurrentlyEnabled(this.getContext()));
-        mEdgeTouchSwitch.setOnPreferenceChangeListener(new EdgeTouchSwitch());
+        mEdgeTouchSwitch.setOnPreferenceChangeListener(new EdgeTouchSwitch(getContext()));
 
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(getContext());
 
