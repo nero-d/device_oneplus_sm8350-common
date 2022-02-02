@@ -225,6 +225,7 @@ PRODUCT_PACKAGES += \
     init.kernel.post_boot.sh \
     init.oem.debug.rc \
     init.oem.rc \
+    init.color.rc \
     init.oem_ftm.rc \
     init.oem_rf.rc \
     init.oplus_chg.sh \
