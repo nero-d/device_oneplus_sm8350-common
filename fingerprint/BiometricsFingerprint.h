@@ -83,7 +83,6 @@ private:
     std::mutex mClientCallbackMutex;
     sp<IBiometricsFingerprintClientCallback> mClientCallback;
     fingerprint_device_t *mDevice;
-    bool mFodCircleVisible;
     sp<IOneplusDisplay> mVendorDisplayService;
     sp<IVendorFingerprintExtensions> mVendorFpService;
 };
