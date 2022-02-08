@@ -23,11 +23,13 @@ import android.provider.Settings;
 
 public class VibrationUtils {
 
-    public static void doHapticFeedback(Context context, int effect) {
+    public static void doHapticFeedback(Context context, int effect, boolean force) {
         final Vibrator mVibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
         final boolean hapticEnabled = Settings.System.getInt(context.getContentResolver(),
                 Settings.System.HAPTIC_FEEDBACK_ENABLED, 1) != 0;
-        if (mVibrator != null && mVibrator.hasVibrator() && hapticEnabled) {
+        final boolean hapticOnSwitch = Settings.System.getInt(context.getContentResolver(),
+                Settings.System.HAPTIC_ON_SWITCH, 1) != 0;
+        if (mVibrator != null && (force || mVibrator.hasVibrator() && hapticEnabled && hapticOnSwitch)) {
             mVibrator.vibrate(VibrationEffect.get(effect));
         }
     }

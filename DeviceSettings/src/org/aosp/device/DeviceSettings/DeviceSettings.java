@@ -263,7 +263,7 @@ public class DeviceSettings extends PreferenceFragment
             SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(getContext());
             sharedPrefs.edit().putInt(KEY_VIBSTRENGTH, value).commit();
             Utils.writeValue(FILE_LEVEL, String.valueOf(value));
-            VibrationUtils.doHapticFeedback(getContext(), VibrationEffect.EFFECT_CLICK);
+            VibrationUtils.doHapticFeedback(getContext(), VibrationEffect.EFFECT_CLICK, true);
         }
         return true;
     }

@@ -222,7 +222,7 @@ public class CustomSeekBarPreference extends Preference implements SeekBar.OnSee
         if (mTrackingTouch && !mContinuousUpdates) {
             mTrackingValue = newValue;
             updateValueViews();
-            VibrationUtils.doHapticFeedback(mContext, VibrationEffect.EFFECT_TEXTURE_TICK);
+            VibrationUtils.doHapticFeedback(mContext, VibrationEffect.EFFECT_TEXTURE_TICK, false);
         } else if (mValue != newValue) {
             if (!callChangeListener(newValue)) {
                 mSeekBar.setProgress(getSeekValue(mValue));
@@ -262,7 +262,7 @@ public class CustomSeekBarPreference extends Preference implements SeekBar.OnSee
         } else if (id == R.id.plus) {
             setValue(mValue + mInterval, true);
         }
-        VibrationUtils.doHapticFeedback(mContext, VibrationEffect.EFFECT_CLICK);
+        VibrationUtils.doHapticFeedback(mContext, VibrationEffect.EFFECT_CLICK, false);
     }
 
     @Override

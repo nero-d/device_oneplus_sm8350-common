@@ -54,6 +54,6 @@ public class SwitchPreference extends androidx.preference.SwitchPreference {
     @Override
     protected void performClick(View view) {
         super.performClick(view);
-        VibrationUtils.doHapticFeedback(mContext, VibrationEffect.EFFECT_CLICK);
+        VibrationUtils.doHapticFeedback(mContext, VibrationEffect.EFFECT_CLICK, false);
     }
 }
