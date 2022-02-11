@@ -29,6 +29,12 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/oneplus/sm8350-common/sm8350-common-vendor.mk)
 
+# Inherit OnePlus-fwk from vendor/oneplus/extras
+$(call inherit-product, vendor/oneplus/extras/OnePlus-fwk.mk)
+
+# Inherit WfdCommon from vendor/oneplus/extras
+$(call inherit-product, vendor/oneplus/extras/WfdCommon.mk)
+
 # Additional native libraries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/misc/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
@@ -412,13 +418,6 @@ PRODUCT_PACKAGES += \
     libOmxQcelp13Enc \
     libstagefrighthw
 
-# OnePlus
-PRODUCT_PACKAGES += \
-    oneplus-fwk.oneplus_lahaina
-
-PRODUCT_BOOT_JARS += \
-    oneplus-fwk.oneplus_lahaina
-
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti \
@@ -563,6 +562,3 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libnl \
     libwfdaac_vendor
-
-PRODUCT_BOOT_JARS += \
-    WfdCommon
